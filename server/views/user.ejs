@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity=""
+    crossorigin="anonymous"></script>
+    <style>
+      body {
+        padding: 5%
+      }
+      form {
+        margin-right: 3%;
+      }
+    </style>
+  </head>
+<body>
+  <div class='ui segment'>
+    <h2 class="ui center aligned header">
+        <i class="circular users"></i>
+        Register
+      </h2>
+      <div class='ui container'>
+      <form class='ui form' action="/register" method="POST">
+              <div class="field">
+                <label>Nome</label>
+                <input type="text" name="nome" placeholder="Nome" id='name' value="<%=nome%>">
+              </div>
+              <div class="field">
+                <label>Sobrenome</label>
+                <input type="text" name="sobrenome" placeholder="Sobrenome" id='sobrenome' value="<%=sobrenome%>">
+              </div>
+              <div class="field">
+                <label>E-mail</label>
+                <input type="text" name="email" placeholder="E-mail" id='email' value="<%=email%>">
+              </div>
+              <button class="ui button" type="submit">Submit</button>
+      </form>
+      </div>
+      <div class='ui divider'></div>
+        <table class="ui definition table">
+          <thead>
+            <tr><th></th>
+            <th>Info</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td>Nome</td>
+              <td><%=nome%></td>
+            </tr>
+            <tr>
+              <td>Sobrenome</td>
+              <td><%=sobrenome%></td>
+            </tr>
+            <tr>
+              <td>E-mail</td>
+              <td><%=email%></td>
+            </tr>
+            <tr>
+              <td>Animal</td>
+              <td><%=object[0]%></td>
+            </tr>
+            <tr>
+              <td>País</td>
+              <td><%=object[1]%></td>
+            </tr>
+            <tr>
+              <td>Cor</td>
+              <td><%=object[2]%></td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+</body>
+</html>
